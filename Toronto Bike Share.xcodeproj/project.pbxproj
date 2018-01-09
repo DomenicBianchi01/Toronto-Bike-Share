@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B036A9662003097100118954 /* RouteDirectionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A9652003097100118954 /* RouteDirectionsInteractor.swift */; };
+		B036A9682003098700118954 /* RouteDirectionsInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A9672003098700118954 /* RouteDirectionsInteractable.swift */; };
+		B03A4C4C20003D2000364B02 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C4B20003D2000364B02 /* AppInfoViewController.swift */; };
+		B03A4C4E20004E7800364B02 /* StatusBarBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C4D20004E7800364B02 /* StatusBarBackgroundView.swift */; };
+		B03A4C5020005BFD00364B02 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C4F20005BFD00364B02 /* UIViewExtensions.swift */; };
+		B03A4C54200074B800364B02 /* DirectionsETAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C53200074B700364B02 /* DirectionsETAViewController.swift */; };
+		B03A4C572000801700364B02 /* StationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C552000801700364B02 /* StationDetails.swift */; };
+		B03A4C582000801700364B02 /* StationInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C562000801700364B02 /* StationInformation.swift */; };
+		B03A4C5A200080C400364B02 /* SystemFeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C59200080C400364B02 /* SystemFeeds.swift */; };
+		B03A4C5C2000890800364B02 /* UISegmentedControlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C5B2000890800364B02 /* UISegmentedControlExtensions.swift */; };
+		B04DB7AC2001BC9800FDE896 /* map.geojson in Resources */ = {isa = PBXBuildFile; fileRef = B04DB7AB2001BC9800FDE896 /* map.geojson */; };
+		B04DB7B22001CBE800FDE896 /* RouteStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB7B12001CBE800FDE896 /* RouteStepTableViewCell.swift */; };
+		B04DB7B42001D3D600FDE896 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DB7B32001D3D600FDE896 /* DoubleExtensions.swift */; };
+		B05E3A951FFD7F1E002A150B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E3A941FFD7F1E002A150B /* AppDelegate.swift */; };
+		B05E3A9A1FFD7F1E002A150B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05E3A981FFD7F1E002A150B /* Main.storyboard */; };
+		B05E3A9C1FFD7F1E002A150B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B05E3A9B1FFD7F1E002A150B /* Assets.xcassets */; };
+		B05E3A9F1FFD7F1E002A150B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05E3A9D1FFD7F1E002A150B /* LaunchScreen.storyboard */; };
+		B05E3AB01FFD82E5002A150B /* BikeShareDataProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E3AAF1FFD82E5002A150B /* BikeShareDataProvidable.swift */; };
+		B05E3AB21FFD830C002A150B /* StationInfoDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E3AB11FFD830C002A150B /* StationInfoDataProvider.swift */; };
+		B05E3AB41FFD9B2F002A150B /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E3AB31FFD9B2F002A150B /* Station.swift */; };
+		B05E3AB81FFDA881002A150B /* StationAnnotationCluster.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E3AB71FFDA881002A150B /* StationAnnotationCluster.swift */; };
+		B05E3ABA1FFDA945002A150B /* StationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E3AB91FFDA945002A150B /* StationAnnotationView.swift */; };
+		B05E3ABC1FFDCCDA002A150B /* StationCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05E3ABB1FFDCCDA002A150B /* StationCalloutView.xib */; };
+		B05E3ABF1FFDCDC5002A150B /* StationCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E3ABE1FFDCDC5002A150B /* StationCalloutView.swift */; };
+		B07905CE1FFF161D000385F0 /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07905CD1FFF161D000385F0 /* NotificationExtensions.swift */; };
+		B07905D11FFF1983000385F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07905D01FFF1983000385F0 /* MapKit.framework */; };
+		B0BC4A6F1FFF2DA4005E400F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B09E3F0C200121FD00DA4913 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B036A9652003097100118954 /* RouteDirectionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDirectionsInteractor.swift; sourceTree = "<group>"; };
+		B036A9672003098700118954 /* RouteDirectionsInteractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDirectionsInteractable.swift; sourceTree = "<group>"; };
+		B03A4C4B20003D2000364B02 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
+		B03A4C4D20004E7800364B02 /* StatusBarBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarBackgroundView.swift; sourceTree = "<group>"; };
+		B03A4C4F20005BFD00364B02 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		B03A4C53200074B700364B02 /* DirectionsETAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsETAViewController.swift; sourceTree = "<group>"; };
+		B03A4C552000801700364B02 /* StationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDetails.swift; sourceTree = "<group>"; };
+		B03A4C562000801700364B02 /* StationInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationInformation.swift; sourceTree = "<group>"; };
+		B03A4C59200080C400364B02 /* SystemFeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFeeds.swift; sourceTree = "<group>"; };
+		B03A4C5B2000890800364B02 /* UISegmentedControlExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControlExtensions.swift; sourceTree = "<group>"; };
+		B04DB7AB2001BC9800FDE896 /* map.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = map.geojson; sourceTree = "<group>"; };
+		B04DB7B12001CBE800FDE896 /* RouteStepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteStepTableViewCell.swift; sourceTree = "<group>"; };
+		B04DB7B32001D3D600FDE896 /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
+		B05E3A911FFD7F1E002A150B /* Toronto Bike Share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toronto Bike Share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B05E3A941FFD7F1E002A150B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B05E3A991FFD7F1E002A150B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B05E3A9B1FFD7F1E002A150B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B05E3A9E1FFD7F1E002A150B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B05E3AA01FFD7F1E002A150B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B05E3AAF1FFD82E5002A150B /* BikeShareDataProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeShareDataProvidable.swift; sourceTree = "<group>"; };
+		B05E3AB11FFD830C002A150B /* StationInfoDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfoDataProvider.swift; sourceTree = "<group>"; };
+		B05E3AB31FFD9B2F002A150B /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		B05E3AB71FFDA881002A150B /* StationAnnotationCluster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAnnotationCluster.swift; sourceTree = "<group>"; };
+		B05E3AB91FFDA945002A150B /* StationAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAnnotationView.swift; sourceTree = "<group>"; };
+		B05E3ABB1FFDCCDA002A150B /* StationCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCalloutView.xib; sourceTree = "<group>"; };
+		B05E3ABE1FFDCDC5002A150B /* StationCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCalloutView.swift; sourceTree = "<group>"; };
+		B07905CD1FFF161D000385F0 /* NotificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtensions.swift; sourceTree = "<group>"; };
+		B07905D01FFF1983000385F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B09E3F0D2001236100DA4913 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B05E3A8E1FFD7F1E002A150B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07905D11FFF1983000385F0 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B036A9612003085700118954 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				B036A9672003098700118954 /* RouteDirectionsInteractable.swift */,
+				B036A9622003086000118954 /* Implementations */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		B036A9622003086000118954 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				B036A9652003097100118954 /* RouteDirectionsInteractor.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		B04DB7B02001CBCC00FDE896 /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				B04DB7B12001CBE800FDE896 /* RouteStepTableViewCell.swift */,
+			);
+			path = Directions;
+			sourceTree = "<group>";
+		};
+		B05E3A881FFD7F1E002A150B = {
+			isa = PBXGroup;
+			children = (
+				B05E3A931FFD7F1E002A150B /* Toronto Bike Share */,
+				B05E3A921FFD7F1E002A150B /* Products */,
+				B07905CF1FFF1983000385F0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B05E3A921FFD7F1E002A150B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B05E3A911FFD7F1E002A150B /* Toronto Bike Share.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B05E3A931FFD7F1E002A150B /* Toronto Bike Share */ = {
+			isa = PBXGroup;
+			children = (
+				B07905CC1FFF1611000385F0 /* Extensions */,
+				B05E3AA71FFD8158002A150B /* Entities */,
+				B05E3AA61FFD814E002A150B /* DataProviders */,
+				B036A9612003085700118954 /* Interactors */,
+				B05E3ABD1FFDCDB7002A150B /* Views */,
+				B05E3A941FFD7F1E002A150B /* AppDelegate.swift */,
+				B05E3ABB1FFDCCDA002A150B /* StationCalloutView.xib */,
+				B05E3A981FFD7F1E002A150B /* Main.storyboard */,
+				B05E3A9B1FFD7F1E002A150B /* Assets.xcassets */,
+				B05E3A9D1FFD7F1E002A150B /* LaunchScreen.storyboard */,
+				B05E3AA01FFD7F1E002A150B /* Info.plist */,
+				B04DB7AB2001BC9800FDE896 /* map.geojson */,
+			);
+			path = "Toronto Bike Share";
+			sourceTree = "<group>";
+		};
+		B05E3AA61FFD814E002A150B /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				B05E3AAF1FFD82E5002A150B /* BikeShareDataProvidable.swift */,
+				B05E3AAC1FFD82BA002A150B /* Implementations */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		B05E3AA71FFD8158002A150B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B05E3AC01FFDDBCF002A150B /* JSON */,
+				B05E3AB31FFD9B2F002A150B /* Station.swift */,
+				B05E3AB91FFDA945002A150B /* StationAnnotationView.swift */,
+				B05E3AB71FFDA881002A150B /* StationAnnotationCluster.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B05E3AAC1FFD82BA002A150B /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				B05E3AB11FFD830C002A150B /* StationInfoDataProvider.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		B05E3ABD1FFDCDB7002A150B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B04DB7B02001CBCC00FDE896 /* Directions */,
+				B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */,
+				B05E3ABE1FFDCDC5002A150B /* StationCalloutView.swift */,
+				B03A4C4B20003D2000364B02 /* AppInfoViewController.swift */,
+				B03A4C53200074B700364B02 /* DirectionsETAViewController.swift */,
+				B03A4C4D20004E7800364B02 /* StatusBarBackgroundView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B05E3AC01FFDDBCF002A150B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				B03A4C552000801700364B02 /* StationDetails.swift */,
+				B03A4C562000801700364B02 /* StationInformation.swift */,
+				B03A4C59200080C400364B02 /* SystemFeeds.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		B07905CC1FFF1611000385F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B07905CD1FFF161D000385F0 /* NotificationExtensions.swift */,
+				B03A4C4F20005BFD00364B02 /* UIViewExtensions.swift */,
+				B03A4C5B2000890800364B02 /* UISegmentedControlExtensions.swift */,
+				B04DB7B32001D3D600FDE896 /* DoubleExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B07905CF1FFF1983000385F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B09E3F0D2001236100DA4913 /* MapKit.framework */,
+				B07905D01FFF1983000385F0 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B05E3A901FFD7F1E002A150B /* Toronto Bike Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B05E3AA31FFD7F1E002A150B /* Build configuration list for PBXNativeTarget "Toronto Bike Share" */;
+			buildPhases = (
+				B05E3A8D1FFD7F1E002A150B /* Sources */,
+				B05E3A8E1FFD7F1E002A150B /* Frameworks */,
+				B05E3A8F1FFD7F1E002A150B /* Resources */,
+				B09E3F0C200121FD00DA4913 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toronto Bike Share";
+			productName = "Toronto Bike Share";
+			productReference = B05E3A911FFD7F1E002A150B /* Toronto Bike Share.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B05E3A891FFD7F1E002A150B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Domenic Bianchi";
+				TargetAttributes = {
+					B05E3A901FFD7F1E002A150B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B05E3A8C1FFD7F1E002A150B /* Build configuration list for PBXProject "Toronto Bike Share" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B05E3A881FFD7F1E002A150B;
+			productRefGroup = B05E3A921FFD7F1E002A150B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B05E3A901FFD7F1E002A150B /* Toronto Bike Share */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B05E3A8F1FFD7F1E002A150B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04DB7AC2001BC9800FDE896 /* map.geojson in Resources */,
+				B05E3ABC1FFDCCDA002A150B /* StationCalloutView.xib in Resources */,
+				B05E3A9F1FFD7F1E002A150B /* LaunchScreen.storyboard in Resources */,
+				B05E3A9C1FFD7F1E002A150B /* Assets.xcassets in Resources */,
+				B05E3A9A1FFD7F1E002A150B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B05E3A8D1FFD7F1E002A150B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03A4C54200074B800364B02 /* DirectionsETAViewController.swift in Sources */,
+				B03A4C4C20003D2000364B02 /* AppInfoViewController.swift in Sources */,
+				B0BC4A6F1FFF2DA4005E400F /* MapViewController.swift in Sources */,
+				B05E3AB21FFD830C002A150B /* StationInfoDataProvider.swift in Sources */,
+				B05E3ABA1FFDA945002A150B /* StationAnnotationView.swift in Sources */,
+				B05E3AB01FFD82E5002A150B /* BikeShareDataProvidable.swift in Sources */,
+				B03A4C5A200080C400364B02 /* SystemFeeds.swift in Sources */,
+				B036A9682003098700118954 /* RouteDirectionsInteractable.swift in Sources */,
+				B05E3ABF1FFDCDC5002A150B /* StationCalloutView.swift in Sources */,
+				B04DB7B22001CBE800FDE896 /* RouteStepTableViewCell.swift in Sources */,
+				B05E3AB81FFDA881002A150B /* StationAnnotationCluster.swift in Sources */,
+				B03A4C5020005BFD00364B02 /* UIViewExtensions.swift in Sources */,
+				B03A4C5C2000890800364B02 /* UISegmentedControlExtensions.swift in Sources */,
+				B04DB7B42001D3D600FDE896 /* DoubleExtensions.swift in Sources */,
+				B07905CE1FFF161D000385F0 /* NotificationExtensions.swift in Sources */,
+				B03A4C582000801700364B02 /* StationInformation.swift in Sources */,
+				B05E3AB41FFD9B2F002A150B /* Station.swift in Sources */,
+				B03A4C572000801700364B02 /* StationDetails.swift in Sources */,
+				B05E3A951FFD7F1E002A150B /* AppDelegate.swift in Sources */,
+				B036A9662003097100118954 /* RouteDirectionsInteractor.swift in Sources */,
+				B03A4C4E20004E7800364B02 /* StatusBarBackgroundView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B05E3A981FFD7F1E002A150B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B05E3A991FFD7F1E002A150B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B05E3A9D1FFD7F1E002A150B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B05E3A9E1FFD7F1E002A150B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B05E3AA11FFD7F1E002A150B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B05E3AA21FFD7F1E002A150B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B05E3AA41FFD7F1E002A150B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2L4Y9VEHG;
+				INFOPLIST_FILE = "Toronto Bike Share/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domenic.bianchi.Toronto-Bike-Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B05E3AA51FFD7F1E002A150B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2L4Y9VEHG;
+				INFOPLIST_FILE = "Toronto Bike Share/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domenic.bianchi.Toronto-Bike-Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B05E3A8C1FFD7F1E002A150B /* Build configuration list for PBXProject "Toronto Bike Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B05E3AA11FFD7F1E002A150B /* Debug */,
+				B05E3AA21FFD7F1E002A150B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B05E3AA31FFD7F1E002A150B /* Build configuration list for PBXNativeTarget "Toronto Bike Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B05E3AA41FFD7F1E002A150B /* Debug */,
+				B05E3AA51FFD7F1E002A150B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B05E3A891FFD7F1E002A150B /* Project object */;
+}
