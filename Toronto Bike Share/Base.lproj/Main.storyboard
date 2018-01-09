@@ -149,10 +149,10 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-Qu-1H8">
                                 <rect key="frame" x="16" y="13" width="343" height="146"/>
-                                <mutableString key="text">This app is not affiliated with the City of Toronto or any other organization affiliated with the Bike Share Toronto system.  Data retrieved from Open Data provided by the City of Toronto.
+                                <string key="text">This app is not affiliated with the City of Toronto or any other organization affiliated with the Bike Share Toronto system.  Data retrieved from Open Data provided by the City of Toronto.
  App Logo and Bike by Adrien Coquet from Nount Project
 
-Bike Rack by luis pachon from Nount Project</mutableString>
+Bike Rack by luis pachon from Nount Project</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -215,10 +215,10 @@ Bike Rack by luis pachon from Nount Project</mutableString>
             </objects>
             <point key="canvasLocation" x="1055" y="-100"/>
         </scene>
-        <!--DirectionsETA View Controller-->
+        <!--Directions View Controller-->
         <scene sceneID="JSd-cs-3Bc">
             <objects>
-                <viewController id="7ZN-Sn-zhz" customClass="DirectionsETAViewController" customModule="Toronto_Bike_Share" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7ZN-Sn-zhz" customClass="DirectionsViewController" customModule="Toronto_Bike_Share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ov5-4R-cxe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

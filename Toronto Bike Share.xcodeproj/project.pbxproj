@@ -12,7 +12,6 @@
 		B03A4C4C20003D2000364B02 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C4B20003D2000364B02 /* AppInfoViewController.swift */; };
 		B03A4C4E20004E7800364B02 /* StatusBarBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C4D20004E7800364B02 /* StatusBarBackgroundView.swift */; };
 		B03A4C5020005BFD00364B02 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C4F20005BFD00364B02 /* UIViewExtensions.swift */; };
-		B03A4C54200074B800364B02 /* DirectionsETAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C53200074B700364B02 /* DirectionsETAViewController.swift */; };
 		B03A4C572000801700364B02 /* StationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C552000801700364B02 /* StationDetails.swift */; };
 		B03A4C582000801700364B02 /* StationInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C562000801700364B02 /* StationInformation.swift */; };
 		B03A4C5A200080C400364B02 /* SystemFeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A4C59200080C400364B02 /* SystemFeeds.swift */; };
@@ -34,6 +33,7 @@
 		B07905CE1FFF161D000385F0 /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07905CD1FFF161D000385F0 /* NotificationExtensions.swift */; };
 		B07905D11FFF1983000385F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07905D01FFF1983000385F0 /* MapKit.framework */; };
 		B0BC4A6F1FFF2DA4005E400F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */; };
+		B0E7488A200460D3007F2F1A /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E74889200460D2007F2F1A /* DirectionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,7 +55,6 @@
 		B03A4C4B20003D2000364B02 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		B03A4C4D20004E7800364B02 /* StatusBarBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarBackgroundView.swift; sourceTree = "<group>"; };
 		B03A4C4F20005BFD00364B02 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		B03A4C53200074B700364B02 /* DirectionsETAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsETAViewController.swift; sourceTree = "<group>"; };
 		B03A4C552000801700364B02 /* StationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDetails.swift; sourceTree = "<group>"; };
 		B03A4C562000801700364B02 /* StationInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationInformation.swift; sourceTree = "<group>"; };
 		B03A4C59200080C400364B02 /* SystemFeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFeeds.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		B07905D01FFF1983000385F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B09E3F0D2001236100DA4913 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B0E74889200460D2007F2F1A /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +114,7 @@
 		B04DB7B02001CBCC00FDE896 /* Directions */ = {
 			isa = PBXGroup;
 			children = (
+				B0E74889200460D2007F2F1A /* DirectionsViewController.swift */,
 				B04DB7B12001CBE800FDE896 /* RouteStepTableViewCell.swift */,
 			);
 			path = Directions;
@@ -190,7 +191,6 @@
 				B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */,
 				B05E3ABE1FFDCDC5002A150B /* StationCalloutView.swift */,
 				B03A4C4B20003D2000364B02 /* AppInfoViewController.swift */,
-				B03A4C53200074B700364B02 /* DirectionsETAViewController.swift */,
 				B03A4C4D20004E7800364B02 /* StatusBarBackgroundView.swift */,
 			);
 			path = Views;
@@ -306,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03A4C54200074B800364B02 /* DirectionsETAViewController.swift in Sources */,
+				B0E7488A200460D3007F2F1A /* DirectionsViewController.swift in Sources */,
 				B03A4C4C20003D2000364B02 /* AppInfoViewController.swift in Sources */,
 				B0BC4A6F1FFF2DA4005E400F /* MapViewController.swift in Sources */,
 				B05E3AB21FFD830C002A150B /* StationInfoDataProvider.swift in Sources */,

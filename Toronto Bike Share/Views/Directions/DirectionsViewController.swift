@@ -1,5 +1,5 @@
 //
-//  DirectionsETAViewController.swift
+//  DirectionsViewController.swift
 //  Toronto Bike Share
 //
 //  Created by Domenic Bianchi on 2018-01-05.
@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-final class DirectionsETAViewController: UIViewController {
+final class DirectionsViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var etaLabel: UILabel!
     @IBOutlet var tableView: UITableView!
@@ -39,7 +39,7 @@ final class DirectionsETAViewController: UIViewController {
 }
 
 // MARK: - <UITableViewDataSource>
-extension DirectionsETAViewController: UITableViewDataSource {
+extension DirectionsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

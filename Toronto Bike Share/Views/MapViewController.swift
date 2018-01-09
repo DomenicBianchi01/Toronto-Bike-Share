@@ -20,7 +20,7 @@ final class MapViewController: UIViewController {
     
     // MARK: - Properties
     private let locationManager = CLLocationManager()
-    private var etaViewController: DirectionsETAViewController? = nil
+    private var etaViewController: DirectionsViewController? = nil
     private var isETAViewOnScreen: Bool = false
     private var isAppInfoViewOnScreen: Bool = false
     
@@ -204,7 +204,7 @@ final class MapViewController: UIViewController {
     // MARK: - Segue Functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.directionsEtaSegue {
-            etaViewController = segue.destination as? DirectionsETAViewController
+            etaViewController = segue.destination as? DirectionsViewController
         }
     }
 }
