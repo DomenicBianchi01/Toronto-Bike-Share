@@ -189,8 +189,8 @@
 			children = (
 				B04DB7B02001CBCC00FDE896 /* Directions */,
 				B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */,
-				B05E3ABE1FFDCDC5002A150B /* StationCalloutView.swift */,
 				B03A4C4B20003D2000364B02 /* AppInfoViewController.swift */,
+				B05E3ABE1FFDCDC5002A150B /* StationCalloutView.swift */,
 				B03A4C4D20004E7800364B02 /* StatusBarBackgroundView.swift */,
 			);
 			path = Views;
@@ -471,7 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.domenic.bianchi.Toronto-Bike-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -487,7 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.domenic.bianchi.Toronto-Bike-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

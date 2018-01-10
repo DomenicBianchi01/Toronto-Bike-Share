@@ -70,6 +70,9 @@ final class StationCalloutView: UIView {
         alertController.addAction(walkingDirections)
         alertController.addAction(automobileDirections)
         alertController.addAction(cancelAction)
+        
+        alertController.popoverPresentationController?.sourceView = self
+        alertController.popoverPresentationController?.sourceRect = bounds
 
         UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
     }
