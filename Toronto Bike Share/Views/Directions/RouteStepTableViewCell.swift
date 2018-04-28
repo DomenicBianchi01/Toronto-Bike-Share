@@ -11,9 +11,9 @@ import MapKit
 
 final class RouteStepTableViewCell: UITableViewCell {
     // MARK: - IBOutlets
-    @IBOutlet var distanceLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var noticeLabel: UILabel!
+    @IBOutlet private var distanceLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var noticeLabel: UILabel!
     
     // MARK: - Properties
     var routeStep: MKRouteStep? = nil {

@@ -13,10 +13,12 @@ final class StationInfoDataProvider {}
 // MARK: - <BikeShareDataProvidable>
 extension StationInfoDataProvider: BikeShareDataProvidable {
     func fetchBikeShareData<T: Decodable>(from urlString: String, using type: T.Type, completion: @escaping (T?) -> Void) {
+
         guard let url = URL(string: urlString) else {
             completion(nil)
             return
         }
+
         do {
             let jsonString = try String(contentsOf: url, encoding: .ascii)
             if let jsonData = jsonString.data(using: .utf8) {
@@ -24,10 +26,8 @@ extension StationInfoDataProvider: BikeShareDataProvidable {
                 completion(json)
                 return
             }
-        }
-        catch(let error) {
-            print(error)
-        }
+        } catch {}
+
         completion(nil)
     }
 }

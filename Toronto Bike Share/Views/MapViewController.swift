@@ -11,12 +11,12 @@ import MapKit
 
 final class MapViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet var mapView: MKMapView!
-    @IBOutlet var locationToolbar: UIToolbar!
-    @IBOutlet var mapTypeSegmentedControl: UISegmentedControl!
-    @IBOutlet var appInfoView: UIView!
-    @IBOutlet var appInfoViewPositionConstraint: NSLayoutConstraint!
-    @IBOutlet var etaViewPositionConstraint: NSLayoutConstraint!
+    @IBOutlet private var mapView: MKMapView!
+    @IBOutlet private var locationToolbar: UIToolbar!
+    @IBOutlet private var mapTypeSegmentedControl: UISegmentedControl!
+    @IBOutlet private var appInfoView: UIView!
+    @IBOutlet private var appInfoViewPositionConstraint: NSLayoutConstraint!
+    @IBOutlet private var etaViewPositionConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     private let locationManager = CLLocationManager()
@@ -72,7 +72,7 @@ final class MapViewController: UIViewController {
             
             guard let unwrappedResponse = response,
                 let route = unwrappedResponse.routes.first else {
-                    self.displayErrorAlert()
+                    self.displayErrorAlert(with: "Could not generate directions")
                     return
             }
 
@@ -131,8 +131,8 @@ final class MapViewController: UIViewController {
         }
     }
     
-    private func displayErrorAlert() {
-        let alertController = UIAlertController(title: "Error", message: "Unable to fetch data. Please try again later.", preferredStyle: .alert)
+    private func displayErrorAlert(with message: String = "Unable to fetch data. Please try again later.") {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "OK", style: .default, handler: nil)
 

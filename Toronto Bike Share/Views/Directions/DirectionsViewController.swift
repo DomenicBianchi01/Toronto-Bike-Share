@@ -11,8 +11,8 @@ import MapKit
 
 final class DirectionsViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet var etaLabel: UILabel!
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var etaLabel: UILabel!
+    @IBOutlet private var tableView: UITableView!
     
     // MARK: - Properties
     var route: MKRoute? = nil {
@@ -21,7 +21,7 @@ final class DirectionsViewController: UIViewController {
                 etaLabel.text = "Unknown Travel Time"
                 return
             }
-            etaLabel.text = "About \(String(Int(route.expectedTravelTime / 60))) minutes"
+            etaLabel.text = "About \(Int(route.expectedTravelTime / 60)) minutes"
             
             tableView.reloadData()
         }
@@ -35,6 +35,11 @@ final class DirectionsViewController: UIViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
+    }
+    
+    // MARK: - IBActions
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        NotificationCenter.default.post(name: .clearDirections, object: nil, userInfo: nil)
     }
 }
 

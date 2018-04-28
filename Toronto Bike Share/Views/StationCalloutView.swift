@@ -11,10 +11,10 @@ import MapKit
 
 final class StationCalloutView: UIView {
     // MARK: - IBOutlets
-    @IBOutlet var stationNameLabel: UILabel!
-    @IBOutlet var availableBikesLabel: UILabel!
-    @IBOutlet var availableDocksLabel: UILabel!
-    @IBOutlet var directionsButton: UIButton!
+    @IBOutlet private var stationNameLabel: UILabel!
+    @IBOutlet private var availableBikesLabel: UILabel!
+    @IBOutlet private var availableDocksLabel: UILabel!
+    @IBOutlet private var directionsButton: UIButton!
     
     // MARK: Properties
     private var annotation: MKAnnotation? = nil
