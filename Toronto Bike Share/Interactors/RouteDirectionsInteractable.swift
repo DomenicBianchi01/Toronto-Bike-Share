@@ -21,5 +21,5 @@ protocol RouteDirectionsInteractable {
     func calculateRoute(from startLocation: CLLocationCoordinate2D,
                         to endLocation: CLLocationCoordinate2D,
                         by transportType: MKDirectionsTransportType,
-                        completion: @escaping (MKDirectionsResponse?) -> Void)
+                        completion: @escaping (MKDirections.Response?) -> Void)
 }

@@ -17,7 +17,7 @@ struct Data: Codable {
 }
 
 struct Stations: Codable {
-    let id: Int
+    let id: String
     let name: String
     let lat: Double
     let long: Double

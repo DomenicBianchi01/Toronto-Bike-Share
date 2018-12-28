@@ -13,9 +13,9 @@ final class RouteDirectionsInteractor {}
 
 // MARK: - <RouteDirectionsInteractable>
 extension RouteDirectionsInteractor: RouteDirectionsInteractable {
-    func calculateRoute(from startLocation: CLLocationCoordinate2D, to endLocation: CLLocationCoordinate2D, by transportType: MKDirectionsTransportType, completion: @escaping (MKDirectionsResponse?) -> Void) {
+    func calculateRoute(from startLocation: CLLocationCoordinate2D, to endLocation: CLLocationCoordinate2D, by transportType: MKDirectionsTransportType, completion: @escaping (MKDirections.Response?) -> Void) {
 
-        let request = MKDirectionsRequest()
+        let request = MKDirections.Request()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: startLocation, addressDictionary: nil))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: endLocation, addressDictionary: nil))
         request.transportType = transportType

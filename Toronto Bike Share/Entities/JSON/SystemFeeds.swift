@@ -26,4 +26,5 @@ struct Feeds: Codable {
 
 struct Urls: Codable {
     let url: String
+    let name: String
 }

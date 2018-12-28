@@ -10,8 +10,8 @@ import UIKit
 
 extension UIView {
     /// Applies a blue effect using the specified style to the view. This function has no effect on the view if the user has turned on the "Reduce Transparency" option in the iOS settings.
-    func applyBlurEffect(using style: UIBlurEffectStyle) {
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+    func applyBlurEffect(using style: UIBlurEffect.Style) {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             backgroundColor = .clear
             let blurEffect = UIBlurEffect(style: style)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)

@@ -33,7 +33,7 @@ final class DirectionsViewController: UIViewController {
         view.applyBlurEffect(using: .extraLight)
         view.addShadow()
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
     }
     

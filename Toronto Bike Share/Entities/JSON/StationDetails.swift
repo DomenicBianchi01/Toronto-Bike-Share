@@ -17,7 +17,7 @@ struct StatusData: Codable {
 }
 
 struct StationDetail: Codable {
-    let id: Int
+    let id: String
     let bikesAvailable: Int
     let bikesDisabled: Int
     let docksAvailable: Int

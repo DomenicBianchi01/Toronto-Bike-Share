@@ -16,7 +16,7 @@ final class RouteStepTableViewCell: UITableViewCell {
     @IBOutlet private var noticeLabel: UILabel!
     
     // MARK: - Properties
-    var routeStep: MKRouteStep? = nil {
+    var routeStep: MKRoute.Step? = nil {
         didSet {
             configure()
         }

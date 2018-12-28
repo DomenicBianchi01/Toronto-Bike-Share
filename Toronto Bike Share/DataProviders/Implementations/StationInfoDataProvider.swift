@@ -14,7 +14,9 @@ final class StationInfoDataProvider {}
 extension StationInfoDataProvider: BikeShareDataProvidable {
     func fetchBikeShareData<T: Decodable>(from urlString: String, using type: T.Type, completion: @escaping (T?) -> Void) {
 
-        guard let url = URL(string: urlString) else {
+        let modifiedURL = urlString.replacingOccurrences(of: "http://", with: "https://")
+        
+        guard let url = URL(string: modifiedURL) else {
             completion(nil)
             return
         }
@@ -26,7 +28,9 @@ extension StationInfoDataProvider: BikeShareDataProvidable {
                 completion(json)
                 return
             }
-        } catch {}
+        } catch(let error) {
+            print(error)
+        }
 
         completion(nil)
     }

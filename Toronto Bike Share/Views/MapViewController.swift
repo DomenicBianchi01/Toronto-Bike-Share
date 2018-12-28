@@ -82,8 +82,8 @@ final class MapViewController: UIViewController {
                 self.updateAppInfoView()
             }
             
-            self.mapView.add(route.polyline)
-            let newRect = self.mapView.mapRectThatFits(route.polyline.boundingMapRect, edgePadding: UIEdgeInsetsMake(25, 25, 75, 25))
+            self.mapView.addOverlay(route.polyline)
+            let newRect = self.mapView.mapRectThatFits(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets.init(top: 25, left: 25, bottom: 75, right: 25))
             self.mapView.setVisibleMapRect(newRect, animated: true)
         }
     }
@@ -98,18 +98,18 @@ final class MapViewController: UIViewController {
         let dataProvider = StationInfoDataProvider()
         // Fetch the urls for the different feeds (station info, station status, pricing, etc)
         dataProvider.fetchBikeShareData(from: "https://tor.publicbikesystem.net/ube/gbfs/v1/", using: SystemFeeds.self) { systemFeeds in
-            guard let systemFeeds = systemFeeds else {
+            guard let systemFeeds = systemFeeds, let stationInformationUrl = systemFeeds.data.english.feeds.first(where: { $0.name == "station_information"})?.url else {
                 self.displayErrorAlert()
                 return
             }
             // Fetch the station information
-            dataProvider.fetchBikeShareData(from: systemFeeds.data.english.feeds[1].url, using: StationsInfo.self) { stations in
-                guard let stations = stations else {
+            dataProvider.fetchBikeShareData(from: stationInformationUrl, using: StationsInfo.self) { stations in
+                guard let stations = stations, let stationStatusUrl = systemFeeds.data.english.feeds.first(where: { $0.name == "station_status"})?.url else {
                     self.displayErrorAlert()
                     return
                 }
                 // Fetch the station statuses (number of available bikes, number of available racks, etc)
-                dataProvider.fetchBikeShareData(from: systemFeeds.data.english.feeds[2].url, using: StationDetails.self) { statuses in
+                dataProvider.fetchBikeShareData(from: stationStatusUrl, using: StationDetails.self) { statuses in
                     guard let statuses = statuses else {
                         self.displayErrorAlert()
                         return
