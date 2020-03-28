@@ -15,6 +15,8 @@ final class StationCalloutView: UIView {
     @IBOutlet private var availableBikesLabel: UILabel!
     @IBOutlet private var availableDocksLabel: UILabel!
     @IBOutlet private var directionsButton: UIButton!
+    @IBOutlet private var bikeImageView: UIImageView!
+    @IBOutlet private var rackImageView: UIImageView!
     
     // MARK: Properties
     private var annotation: MKAnnotation? = nil
@@ -24,6 +26,9 @@ final class StationCalloutView: UIView {
         NotificationCenter.default.post(name: .clearDirections, object: nil, userInfo: nil)
         self.annotation = annotation
         stationNameLabel.text = annotation.title ?? "Unknown Station"
+        
+        bikeImageView.tintColor = UIColor.imageTintColor
+        rackImageView.tintColor = UIColor.imageTintColor
         
         if let stationAnnotation = annotation as? Station  {
             availableBikesLabel.text = String(stationAnnotation.stationDetail.bikesAvailable)
@@ -50,6 +55,8 @@ final class StationCalloutView: UIView {
         }
 
         frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: height)
+        
+        backgroundColor = traitCollection.userInterfaceStyle == .dark ? .darkGray : .white
     }
     
     // MARK: - IBActions

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,8 +47,8 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" id="bd3-ud-hlF">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="hRu-DW-M2m">
-                                            <rect key="frame" x="16" y="11" width="32" height="22"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="hRu-DW-M2m">
+                                            <rect key="frame" x="16" y="10" width="32" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GUW-rt-xxz"/>
@@ -73,8 +70,8 @@
                                 <rect key="frame" x="64" y="623" width="247" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" id="UvI-bD-q0k">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="tC3-7C-EC5">
-                                            <rect key="frame" x="16" y="7" width="215" height="30"/>
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="tC3-7C-EC5">
+                                            <rect key="frame" x="16" y="6" width="215" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
                                                 <segment title="Standard"/>
@@ -149,10 +146,10 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-Qu-1H8">
                                 <rect key="frame" x="16" y="13" width="343" height="146"/>
-                                <mutableString key="text">This app is not affiliated with the City of Toronto or any other organization affiliated with the Bike Share Toronto system.  Data retrieved from Open Data provided by the City of Toronto.
+                                <string key="text">This app is not affiliated with the City of Toronto or any other organization affiliated with the Bike Share Toronto system.  Data retrieved from Open Data provided by the City of Toronto.
  App Logo and Bike by Adrien Coquet from Noun Project
 
-Bike Rack by luis pachon from Noun Project</mutableString>
+Bike Rack by luis pachon from Noun Project</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -210,6 +207,10 @@ Bike Rack by luis pachon from Noun Project</mutableString>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Mn-6e-gmN"/>
                     </view>
+                    <connections>
+                        <outlet property="bikeImageView" destination="cVK-YL-Ams" id="54W-xa-SlH"/>
+                        <outlet property="rackImageView" destination="izY-uV-6xv" id="ctZ-ql-nmA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6f-uY-Qer" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,11 +244,11 @@ Bike Rack by luis pachon from Noun Project</mutableString>
                                         <rect key="frame" x="0.0" y="28" width="375" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oqh-zx-WAm" id="VKK-al-hxO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFa-KG-bRK">
-                                                    <rect key="frame" x="8" y="2" width="359" height="36"/>
+                                                    <rect key="frame" x="15" y="5" width="345" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="1ie-aP-LE7"/>
                                                     </constraints>
@@ -256,13 +257,13 @@ Bike Rack by luis pachon from Noun Project</mutableString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHJ-s7-KAo">
-                                                    <rect key="frame" x="8" y="38" width="359" height="20.5"/>
+                                                    <rect key="frame" x="15" y="41" width="345" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRR-JC-Els">
-                                                    <rect key="frame" x="15" y="66" width="345" height="0.0"/>
+                                                    <rect key="frame" x="15" y="69" width="345" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -322,6 +323,7 @@ Bike Rack by luis pachon from Noun Project</mutableString>
                         <viewLayoutGuide key="safeArea" id="b6z-Yr-GxO"/>
                     </view>
                     <connections>
+                        <outlet property="closeWindowButton" destination="bmb-89-3De" id="jRv-vj-z7H"/>
                         <outlet property="etaLabel" destination="Eqw-9g-xPF" id="3id-En-SJI"/>
                         <outlet property="tableView" destination="tty-PX-spU" id="ZoS-Qf-Am9"/>
                     </connections>
@@ -334,6 +336,6 @@ Bike Rack by luis pachon from Noun Project</mutableString>
     <resources>
         <image name="BikeRack" width="778" height="575"/>
         <image name="BlackBike" width="768" height="454"/>
-        <image name="X" width="96" height="96"/>
+        <image name="X" width="48" height="48"/>
     </resources>
 </document>

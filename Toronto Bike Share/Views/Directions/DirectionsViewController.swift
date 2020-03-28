@@ -13,6 +13,7 @@ final class DirectionsViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private var etaLabel: UILabel!
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var closeWindowButton: UIButton!
     
     // MARK: - Properties
     var route: MKRoute? = nil {
@@ -30,8 +31,10 @@ final class DirectionsViewController: UIViewController {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.applyBlurEffect(using: .extraLight)
+        view.applyBlurEffect(using: traitCollection.userInterfaceStyle == .dark ? .dark : .extraLight)
         view.addShadow()
+        
+        closeWindowButton.tintColor = UIColor.imageTintColor
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44

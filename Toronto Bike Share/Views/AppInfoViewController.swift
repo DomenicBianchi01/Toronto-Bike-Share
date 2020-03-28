@@ -8,11 +8,23 @@
 
 import UIKit
 
-final class AppInfoViewController: UIViewController {    
+final class AppInfoViewController: UIViewController {
+    
+    // MARK: Private
+    
+    @IBOutlet private var bikeImageView: UIImageView!
+    @IBOutlet private var rackImageView: UIImageView!
+    
     // MARK: - Lifecycle Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.applyBlurEffect(using: .extraLight)
+        
+        view.applyBlurEffect(using: traitCollection.userInterfaceStyle == .dark ? .dark : .extraLight)
         view.addShadow()
+        
+        bikeImageView.tintColor = UIColor.imageTintColor
+        rackImageView.tintColor = UIColor.imageTintColor
+        
     }
 }

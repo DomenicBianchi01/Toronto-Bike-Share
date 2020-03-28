@@ -34,6 +34,7 @@
 		B07905D11FFF1983000385F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07905D01FFF1983000385F0 /* MapKit.framework */; };
 		B0BC4A6F1FFF2DA4005E400F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */; };
 		B0E7488A200460D3007F2F1A /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E74889200460D2007F2F1A /* DirectionsViewController.swift */; };
+		B0F29F12242FD904008F2C79 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F29F11242FD904008F2C79 /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +81,7 @@
 		B09E3F0D2001236100DA4913 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		B0BC4A6E1FFF2DA4005E400F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B0E74889200460D2007F2F1A /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
+		B0F29F11242FD904008F2C79 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				B03A4C4F20005BFD00364B02 /* UIViewExtensions.swift */,
 				B03A4C5B2000890800364B02 /* UISegmentedControlExtensions.swift */,
 				B04DB7B32001D3D600FDE896 /* DoubleExtensions.swift */,
+				B0F29F11242FD904008F2C79 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,7 +262,7 @@
 				TargetAttributes = {
 					B05E3A901FFD7F1E002A150B = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -318,6 +321,7 @@
 				B05E3ABF1FFDCDC5002A150B /* StationCalloutView.swift in Sources */,
 				B04DB7B22001CBE800FDE896 /* RouteStepTableViewCell.swift in Sources */,
 				B05E3AB81FFDA881002A150B /* StationAnnotationCluster.swift in Sources */,
+				B0F29F12242FD904008F2C79 /* ColorExtensions.swift in Sources */,
 				B03A4C5020005BFD00364B02 /* UIViewExtensions.swift in Sources */,
 				B03A4C5C2000890800364B02 /* UISegmentedControlExtensions.swift in Sources */,
 				B04DB7B42001D3D600FDE896 /* DoubleExtensions.swift in Sources */,
@@ -469,13 +473,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = 667D8S5SPP;
 				INFOPLIST_FILE = "Toronto Bike Share/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.domenic.bianchi.Toronto-Bike-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -485,13 +491,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = 667D8S5SPP;
 				INFOPLIST_FILE = "Toronto Bike Share/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.domenic.bianchi.Toronto-Bike-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
